@@ -1,0 +1,160 @@
+@use "./variables.scss" as *;
+
+// 全局样式重置
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+
+// 自定义滚动条
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #a8a8a8;
+  }
+}
+
+// Element Plus 样式覆盖
+.el-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  .el-card__header {
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+  }
+}
+
+.el-button {
+  border-radius: 4px;
+  
+  &.el-button--primary {
+    background: #1890ff;
+    border-color: #1890ff;
+    
+    &:hover {
+      background: #40a9ff;
+      border-color: #40a9ff;
+    }
+  }
+}
+
+.el-table {
+  .el-table__header {
+    th {
+      background: #fafafa;
+      color: #333;
+      font-weight: 600;
+    }
+  }
+  
+  .el-table__row {
+    &:hover > td {
+      background-color: #f5f7fa;
+    }
+  }
+}
+
+.el-dialog {
+  border-radius: 8px;
+  
+  .el-dialog__header {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 20px 16px;
+    
+    .el-dialog__title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+  
+  .el-dialog__body {
+    padding: 20px;
+  }
+  
+  .el-dialog__footer {
+    border-top: 1px solid #f0f0f0;
+    padding: 16px 20px 20px;
+  }
+}
+
+.el-form {
+  .el-form-item__label {
+    color: #333;
+    font-weight: 500;
+  }
+}
+
+// 工具类
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+// 动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 响应式布局
+@media (max-width: 768px) {
+  .el-col-xs-24 {
+    width: 100% !important;
+  }
+}
